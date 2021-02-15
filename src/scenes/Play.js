@@ -27,6 +27,7 @@ export default class Play extends Scene {
     this.addChild(earth);
     this.addChild(sun)
     this.filters = [sun._blast]
+    window.__PIXI_APP.viewport.filters = [sun._blast]
   }
 
   /**
