@@ -1,16 +1,14 @@
-import { Filter, Sprite } from 'pixi.js';
 import Scene from './Scene';
 
 import Footer from '../components/Footer';
 import Earth from '../components/Earth';
 import gsap from 'gsap/gsap-core';
-import { MotionPathPlugin } from 'gsap/all';
 import Sun from '../components/Sun';
 import Stars from '../components/Stars';
 
 export default class Play extends Scene {
   async onCreated() {
-    gsap.registerPlugin(MotionPathPlugin)
+
     const footer = new Footer();
     footer.x = - window.innerWidth / 2;
     footer.y = window.innerHeight / 2 - footer.height;
@@ -28,8 +26,7 @@ export default class Play extends Scene {
     this.addChild(stars)
     this.addChild(earth);
     this.addChild(sun)
-
-    this.filters = [sun._blast];
+    this.filters = [sun._blast]
   }
 
   /**
