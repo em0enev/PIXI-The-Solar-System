@@ -3,7 +3,7 @@ import { Container, Sprite } from "pixi.js";
 export default class Stars extends Container {
     constructor() {
         super();
-        this.name = 'star';
+        this.name = 'stars';
         this.createStars();
     }
 
