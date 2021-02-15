@@ -1,6 +1,9 @@
 import Splash from './scenes/Splash';
 import Play from './scenes/Play';
 import { Container } from 'pixi.js';
+import AssetManager from './core/AssetManager';
+import fire from './static/fire.json';
+
 
 /**
  * Main game stage, manages scenes/levels.
@@ -28,7 +31,9 @@ export default class Game extends Container {
   async start() {
     await this.switchScene(Splash, { scene: 'splash' });
     await this.currentScene.finish;
-
+    await AssetManager.prepareSpritesheets([
+      { texture: 'fire', data: fire }
+    ]);
     this.switchScene(Play, { scene: 'play' });
   }
 
