@@ -10,6 +10,7 @@ export default class Stars extends Container {
     createStars(){
         for (let i = 0; i < 15; i++) {
             const star = new Sprite.from('star')
+
             star.x = this.getRandomNumber(-750,750)
             star.y = this.getRandomNumber(-350, 350)
             this.addChild(star)

@@ -26,6 +26,9 @@ export default class Sun extends Container{
 
     _createBlast(){
         this._blast = new Sprite.from('sun-blast');
+        this._blast.anchor.set(0.5)
+     //   this._body.addChild(this._blast)
+      //  this._body.mask = this._blast
     }
 
     _createGlowTop(){
