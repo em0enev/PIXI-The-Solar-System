@@ -29,8 +29,6 @@ export default class Play extends Scene {
     this.addChild(sun)
 
     this.filters =[new PIXI.filters.DisplacementFilter(sun._blast)]
-
-    console.log(this.filters)
   }
 
   /**
