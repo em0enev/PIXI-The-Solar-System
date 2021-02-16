@@ -1,6 +1,5 @@
 import Application from './core/Application';
 import * as PIXI from 'pixi.js';
-import Sun from './components/Sun';
 
 
 if (process.env.NODE_ENV === 'development') {

@@ -5,6 +5,7 @@ import Earth from '../components/Earth';
 import gsap from 'gsap/gsap-core';
 import Sun from '../components/Sun';
 import Stars from '../components/Stars';
+import { Filter } from 'pixi.js';
 
 export default class Play extends Scene {
   async onCreated() {
@@ -27,9 +28,9 @@ export default class Play extends Scene {
     this.addChild(earth);
     this.addChild(sun)
 
-    this.filters = [sun._blast]
-    console.log(this.filters[0] )
+    this.filters =[new PIXI.filters.DisplacementFilter(sun._blast)]
 
+    console.log(this.filters)
   }
 
   /**
