@@ -20,15 +20,15 @@ export default class Play extends Scene {
     const earth = new Earth();
     earth.x = -400
     earth.y = 100
-
+    
     gsap.to(earth._rocket, { rotation: -360, ease: 'linear.out', duration: 300, repeat: -1 })
     gsap.fromTo(sun._glowTop, { alpha: 0.2}, {alpha: 1, duration: 5, repeat: -1, yoyo: true})
+    this.filters =[new PIXI.filters.DisplacementFilter(sun._blast)]
 
     this.addChild(stars)
-    this.addChild(earth);
     this.addChild(sun)
+    this.addChild(earth);
 
-    this.filters =[new PIXI.filters.DisplacementFilter(sun._blast)]
   }
 
   /**
