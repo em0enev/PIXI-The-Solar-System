@@ -23,12 +23,14 @@ export default class Play extends Scene {
     
     gsap.to(earth._rocket, { rotation: -360, ease: 'linear.out', duration: 300, repeat: -1 })
     gsap.fromTo(sun._glowTop, { alpha: 0.2}, {alpha: 1, duration: 5, repeat: -1, yoyo: true})
-    this.filters =[new filters.DisplacementFilter(sun._blast)]
 
     this.addChild(stars)
     this.addChild(sun)
     this.addChild(earth);
 
+    //this.filters = [new filters.DisplacementFilter(sun._blast)]
+    
+    window.__PIXI_APP.viewport.filters = [new filters.DisplacementFilter(sun._blast)]
   }
 
   /**
